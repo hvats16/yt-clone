@@ -1,5 +1,21 @@
 import React from "react";
+import { Button } from "./Button";
 
 export const ButtonList = () => {
-  return <div>ButtonList</div>;
+  const buttonNames = [
+    "All",
+    "Music",
+    "Cricket",
+    "Kapil Sharma",
+    "Valorante",
+    "CSGO",
+    "Football",
+    "Hockey",
+    "WWE",
+  ];
+  return (
+    <div>
+      <Button buttonNames={buttonNames} />
+    </div>
+  );
 };
