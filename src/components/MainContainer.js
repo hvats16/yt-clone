@@ -1,12 +1,15 @@
 import React from "react";
 import { ButtonList } from "./ButtonList";
-import { VideoConatiner } from "./VideoConatiner";
+// import { VideoConatiner } from "./VideoConatiner";
+const VideoCont = React.lazy(() => import("./VideoConatiner"));
 
 export const MainContainer = () => {
   return (
     <div className="">
       <ButtonList />
-      <VideoConatiner />
+      <React.Suspense fallback={<>Loading...</>}>
+        <VideoCont />
+      </React.Suspense>
     </div>
   );
 };
